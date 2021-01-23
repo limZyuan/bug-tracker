@@ -1,0 +1,66 @@
+.login-main-container {
+  background: linear-gradient(
+    116.82deg,
+    #5b83f6 0%,
+    #4e94d4 49.48%,
+    #63ceeb 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+.login-container {
+  border: 1px solid black;
+  flex-direction: column;
+  align-self: center;
+  background: linear-gradient(
+    127.4deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.6) 98.83%
+  );
+  border: none;
+  box-sizing: border-box;
+  backdrop-filter: blur(1px);
+  z-index: 2;
+}
+
+.login-avatar {
+  background-color: var(--tertiary-color);
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.login-form {
+  flex-direction: column;
+}
+.login-label {
+  align-self: flex-start;
+  margin-top: 10px;
+}
+.login-input {
+  padding: 0.5rem;
+  margin: 5px 0px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  width: 280px;
+  height: 40px;
+}
+
+/* svg wave */
+.wave {
+  position: absolute;
+  bottom: -50px;
+  animation: 3s waving ease-in-out infinite alternate;
+  width: 100%;
+  min-width: 1000px;
+}
+
+@keyframes waving {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  100% {
+    transform: translate(0%, -50px);
+  }
+}
