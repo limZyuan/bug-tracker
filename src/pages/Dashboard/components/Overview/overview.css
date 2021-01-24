@@ -1,0 +1,25 @@
+.overview-main {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.glassBox {
+  width: 10rem;
+  height: 10rem;
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+
+  /* Glass effect css */
+  background: linear-gradient(
+    127.4deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.6) 98.83%
+  );
+  border: 1px solid white;
+  box-sizing: border-box;
+  backdrop-filter: blur(1px);
+}
