@@ -6,7 +6,9 @@ export default function login(props) {
   return (
     <div className="container flex login-main-container">
       <div className="login-container flex p-3">
-        <img className="login-avatar" alt="" />
+        <div className="login-avatar flex">
+          <i className="fas fa-user" />
+        </div>
         <h1 className="md">Sign In</h1>
         <form
           className="login-form my-2 flex"

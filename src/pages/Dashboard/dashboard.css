@@ -1,0 +1,116 @@
+.dashboard-main {
+  display: grid;
+  grid-template-areas: "nav nav" "sidePanel dashContent";
+  grid-template-rows: max-content 1fr;
+  grid-template-columns: max-content 1fr;
+  background: linear-gradient(
+    116.82deg,
+    #5b83f6 0%,
+    #4e94d4 49.48%,
+    #63ceeb 100%
+  );
+}
+
+/* nav */
+
+.dashboard-nav {
+  grid-area: nav;
+  justify-content: space-between;
+  height: 4rem;
+  background-color: var(--tertiary-color);
+  color: white;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.26);
+}
+
+.dashboard-nav ul {
+  justify-content: space-between;
+  width: 12rem;
+  list-style: none;
+}
+.dashboard-nav li {
+  color: rgb(243, 243, 243);
+  cursor: pointer;
+}
+.dashboard-nav li:hover {
+  color: white;
+  transform: scale(1.02);
+}
+.dashboard-nav li i {
+  font-size: 1.3rem;
+}
+.dashboard-search {
+  border-radius: 1rem;
+  border: 1px solid #eee;
+  padding: 0.4rem 1.2rem;
+  width: 20rem;
+  outline: none;
+}
+
+/* side panel  */
+.dashboard-sidePanel {
+  grid-area: sidePanel;
+  background-color: var(--secondary-color);
+  flex-direction: column;
+  justify-content: space-between;
+  width: 12rem;
+
+  /* Glass effect css */
+  background: linear-gradient(
+    127.4deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.6) 98.83%
+  );
+  border-right: 2px solid white;
+  box-sizing: border-box;
+  backdrop-filter: blur(1px);
+}
+
+.dashboard-sidePanel ul {
+  list-style: none;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 50%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.dashboard-sidePanel li {
+  justify-content: space-around;
+  width: 80%;
+}
+
+.dashboard-sidePanel li:hover {
+  font-weight: 500;
+}
+
+.dashboard-sidePanel li i {
+  color: var(--quad-color);
+  font-size: 1.5rem;
+}
+
+.dashboard-sidePanel-settings {
+  align-self: center;
+  color: rgb(87, 87, 87);
+}
+
+/* content  */
+
+.dashboard-content {
+  grid-area: dashContent;
+}
+
+/* Responsive css for phones */
+@media only screen and (max-width: 768px) {
+  .dashboard-search {
+    display: none;
+  }
+  .dashboard-nav {
+    justify-content: space-around;
+  }
+  .dashboard-sidePanel {
+    width: 4rem;
+  }
+  .dashboard-sidePanel li b {
+    display: none;
+  }
+}
