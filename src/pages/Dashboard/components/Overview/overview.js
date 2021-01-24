@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import dashContext from "../contextAPI/dashContext";
 import "./overview.css";
 
-export default function overview() {
+export default function Overview() {
+  const { things, setThings } = useContext(dashContext);
+
+  console.log(things);
   return (
     <div className="overview-main">
       <div className="glassBox">Your teams</div>

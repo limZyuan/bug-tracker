@@ -77,10 +77,12 @@
 .dashboard-sidePanel li {
   justify-content: space-around;
   width: 80%;
+  color: #414141;
 }
 
 .dashboard-sidePanel li:hover {
-  font-weight: 500;
+  color: black;
+  transform: scale(1.03);
 }
 
 .dashboard-sidePanel li i {
@@ -91,6 +93,7 @@
 .dashboard-sidePanel-settings {
   align-self: center;
   color: rgb(87, 87, 87);
+  cursor: pointer;
 }
 
 /* content  */
