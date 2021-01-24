@@ -1,0 +1,59 @@
+/* side panel  */
+.dashboard-sidePanel {
+  grid-area: sidePanel;
+  background-color: var(--secondary-color);
+  flex-direction: column;
+  justify-content: space-between;
+  width: 12rem;
+
+  /* Glass effect css */
+  background: linear-gradient(
+    127.4deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.6) 98.83%
+  );
+  border-right: 2px solid white;
+  box-sizing: border-box;
+  backdrop-filter: blur(1px);
+}
+
+.dashboard-sidePanel ul {
+  list-style: none;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 50%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.dashboard-sidePanel li {
+  justify-content: space-around;
+  width: 80%;
+  color: #414141;
+}
+
+.dashboard-sidePanel li:hover {
+  color: black;
+  transform: scale(1.03);
+}
+
+.dashboard-sidePanel li i {
+  color: var(--quad-color);
+  font-size: 1.5rem;
+}
+
+.dashboard-sidePanel-settings {
+  align-self: center;
+  color: rgb(87, 87, 87);
+  cursor: pointer;
+}
+
+/* Responsive css for phones */
+@media only screen and (max-width: 768px) {
+  .dashboard-sidePanel {
+    width: 4rem;
+  }
+  .dashboard-sidePanel li b {
+    display: none;
+  }
+}

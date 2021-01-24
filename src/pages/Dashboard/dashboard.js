@@ -4,6 +4,10 @@ import "./dashboard.css";
 // context api
 import { DashProvider } from "./components/contextAPI/dashContext";
 
+// main components
+import Navbar from "./components/NavBar/navbar";
+import SidePanel from "./components/SidePanel/sidePanel";
+
 // tabs
 import Overview from "./components/Overview/overview";
 import WorkItems from "./components/WorkItems/workItems";
@@ -39,45 +43,8 @@ export default function Dashboard() {
 
   return (
     <div className="dashboard-main container">
-      {/* navbar */}
-      <nav className="dashboard-nav flex p-3">
-        <div>Logo</div>
-        <input
-          className="dashboard-search"
-          type="text"
-          placeholder="Search..."
-        ></input>
-        <ul className="flex">
-          <li>
-            <i className="fas fa-tasks"></i>
-          </li>
-          <li>
-            <i className="fas fa-bell"></i>
-          </li>
-          <li>
-            <i className="fas fa-user"></i>
-          </li>
-        </ul>
-      </nav>
-
-      {/* side panel */}
-      <div className="dashboard-sidePanel flex py-3">
-        <ul className="flex">
-          <li className="flex" onClick={tabFunc("Overview")}>
-            <i className="fas fa-columns"></i>
-            <b>Overview</b>
-          </li>
-          <li className="flex" onClick={tabFunc("WorkItems")}>
-            <i className="fas fa-tasks"></i>
-            <b>Work Items</b>
-          </li>
-          <li className="flex" onClick={tabFunc("Teams")}>
-            <i className="fas fa-users"></i>
-            <b>Teams</b>
-          </li>
-        </ul>
-        <i className="fas fa-cog fa-2x dashboard-sidePanel-settings"></i>
-      </div>
+      <Navbar />
+      <SidePanel tabFunc={tabFunc} />
 
       {/* displayed content */}
       <DashProvider value={{ things, setThings }}>

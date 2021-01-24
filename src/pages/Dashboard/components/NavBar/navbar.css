@@ -1,0 +1,43 @@
+/* nav */
+
+.dashboard-nav {
+  grid-area: nav;
+  justify-content: space-between;
+  height: 4rem;
+  background-color: var(--tertiary-color);
+  color: white;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.26);
+}
+
+.dashboard-nav ul {
+  justify-content: space-between;
+  width: 12rem;
+  list-style: none;
+}
+.dashboard-nav li {
+  color: rgb(243, 243, 243);
+  cursor: pointer;
+}
+.dashboard-nav li:hover {
+  color: white;
+  transform: scale(1.02);
+}
+.dashboard-nav li i {
+  font-size: 1.3rem;
+}
+.dashboard-search {
+  border-radius: 1rem;
+  border: 1px solid #eee;
+  padding: 0.4rem 1.2rem;
+  width: 20rem;
+  outline: none;
+}
+/* Responsive css for phones */
+@media only screen and (max-width: 768px) {
+  .dashboard-nav {
+    justify-content: space-around;
+  }
+  .dashboard-search {
+    display: none;
+  }
+}
