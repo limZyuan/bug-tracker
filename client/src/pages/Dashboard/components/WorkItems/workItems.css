@@ -1,0 +1,24 @@
+.workItemsContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+.columnContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 80%;
+  width: 20%;
+}
+.tasksList {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(201, 224, 250);
+}
+.task {
+  background-color: var(--quad-color);
+  color: rgb(213, 235, 253);
+  /* workaround for dragging css issue */
+  position: static !important;
+}

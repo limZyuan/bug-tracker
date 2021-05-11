@@ -19,13 +19,34 @@ export default function Dashboard() {
   /* Context API state */
 
   // dummy variable for testing
-  const [things, setThings] = useState([
-    { id: 1, name: "thing 1", length: 5 },
-    { id: 2, name: "thing 2", length: 2 },
-    { id: 3, name: "thing 3", length: 6 },
-    { id: 4, name: "thing 4", length: 10 },
-    { id: 5, name: "thing 5", length: 1 },
-  ]);
+  const [initialData, setInitialData] = useState({
+    tasks: {
+      "task-1": { id: "task-1", content: "Take out the trash" },
+      "task-2": { id: "task-2", content: "Take out the code" },
+      "task-3": { id: "task-3", content: "Do it now" },
+      "task-4": { id: "task-4", content: "The gg" },
+      "task-5": { id: "task-5", content: "Finish it" },
+      "task-6": { id: "task-6", content: "Clean it up" },
+    },
+    columns: {
+      "column-1": {
+        id: "column-1",
+        title: "To do",
+        taskIds: ["task-1", "task-2"],
+      },
+      "column-2": {
+        id: "column-2",
+        title: "In Progress",
+        taskIds: ["task-3", "task-4"],
+      },
+      "column-3": {
+        id: "column-3",
+        title: "Done",
+        taskIds: ["task-5", "task-6"],
+      },
+    },
+    columnOrder: ["column-1", "column-2", "column-3"],
+  });
 
   const tabFunc = (tab) => (e) => {
     setCurrentTab(tab);
@@ -47,8 +68,8 @@ export default function Dashboard() {
       <SidePanel tabFunc={tabFunc} />
 
       {/* displayed content */}
-      <DashProvider value={{ things, setThings }}>
-        <div className="dashboard-content flex">{renderTab(currentTab)}</div>
+      <DashProvider value={{ initialData, setInitialData }}>
+        <div className="dashboard-content">{renderTab(currentTab)}</div>
       </DashProvider>
     </div>
   );
