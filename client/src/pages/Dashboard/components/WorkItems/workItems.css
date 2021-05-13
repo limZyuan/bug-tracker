@@ -13,10 +13,13 @@
 }
 .tasksList {
   display: flex;
+  min-height: 4rem;
   flex-direction: column;
   background-color: rgb(201, 224, 250);
 }
 .task {
+  height: 8rem !important;
+  width: 8rem !important;
   background-color: var(--quad-color);
   color: rgb(213, 235, 253);
   /* workaround for dragging css issue */
